@@ -69,17 +69,25 @@ async def on_message(message):
     else:
         # A message was send by the user.
         msg = message.content.lower()
-        # response = db.response(msg)
-        if "find_book_date_cat 1980 1990 comic" in msg:
-            response = db.response(msg)
-            # print(response)
-            # print("\n".join(answer))
-        elif "storage" in msg:
-            response = db.response(msg)
-        elif "change_password" in msg:
-            response = db.response(msg)
-        elif "late_users" in msg:
-            response = db.response(msg)
+        if "#" in msg:  # only messages begening with # will be processed
+            command = msg.split("#", 1)[1]
+            # response = db.response(msg)
+            if "find_book_date_cat 1980 1990 comic" in command:
+                response = db.response(command)
+                # print(response)
+                # print("\n".join(answer))
+            elif "storage" in command:
+                response = db.response(command)
+            elif "change_password" in command:
+                response = db.response(command)
+            elif "late_users" in command:
+                response = db.response(command)
+            elif "user_spent" in command:
+                response = db.response(command)
+            elif "aveg_spent" in command:
+                response = db.response(command)
+            elif "create_user" in command:
+                response = db.response(command)
 
     if response:
         # bot sends response to the Discord API and the response is show

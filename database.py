@@ -55,6 +55,22 @@ def response(msg):
         db_response = change_password(userId, newPassword)
     elif "late_users" in bot_command:
         db_response = late_users()
+    elif "user_spent" in bot_command:
+        spent_user_id = command_parts[1]
+        db_response = user_spent(spent_user_id)
+    elif "aveg_spent" in bot_command:
+        db_response = aveg_spent()
+    elif "create_user" in bot_command:
+        f_name = command_parts[1]
+        l_name = command_parts[2]
+        u_email = command_parts[3]
+        u_password = command_parts[4]
+        u_gender = command_parts[5]
+        u_num = command_parts[6]
+        dob = command_parts[7]
+        db_response = create_user(
+            f_name, l_name, u_email, u_password, u_gender, u_num, dob
+        )
     return db_response
 
 
@@ -149,6 +165,7 @@ SET password = %s
 WHERE user_id = %s"""
             variables = (new_password, user_id)
             cur.execute(query, variables)
+            con.commit()
             # print("executed")
             sqlResult = cur.fetchall()
             # print(sqlResult)
@@ -185,9 +202,90 @@ WHERE b.returned_date IS NULL"""
     return result
 
 
+def user_spent(id):
+    try:
+        result = []
+        user_spent_id = id
+        con = connect()
+        if con:
+            cur = con.cursor()
+            # execute query
+            print("executing user_spent query")
+            query = """SELECT amount as 'Total spent: ' FROM invoice where user_user_id=%s"""
+            cur.execute(query, user_spent_id)
+            sqlResult = cur.fetchall()
+            print("executed")
+            result = sqlResult
+
+            print(sqlResult)
+            # print("password changed")
+        con.close
+    except:
+        result = -1
+    return result
+
+
+def aveg_spent():
+    try:
+        result = []
+        con = connect()
+        if con:
+            cur = con.cursor()
+            # execute query
+            print("executing avg_spent query")
+            query = """SELECT avg(amount) as 'Avg. spent by a user' FROM invoice;"""
+            cur.execute(query)
+            sqlResult = cur.fetchall()
+            print("executed")
+            result = sqlResult
+
+            print(sqlResult)
+        con.close
+    except:
+        result = -1
+    return result
+
+
+def create_user(fn, ln, em, ps, ge, ph, dob):
+    try:
+        result = []
+        c_name = fn
+        c_lname = ln
+        c_email = em
+        c_pswd = ps
+        c_gender = ge
+        c_phnum = ph
+        c_dob = dob
+        result = []
+        con = connect()
+        if con:
+            cur = con.cursor()
+            # execute query
+            print("executing create_user query")
+            query = """INSERT INTO user ( first_name, last_name, email, password, gender, phone_number, DOB) 
+VALUES (%s, %s, %s, %s,%s, %s, %s)"""
+            variables = (c_name, c_lname, c_email, c_pswd, c_gender, c_phnum, c_dob)
+            cur.execute(query, variables)
+            con.commit()
+            sqlResult = cur.fetchall()
+            print("executed")
+            result.append("------User created------")
+
+            # print(sqlResult)
+        con.close
+    except:
+        result = -1
+    return result
+
+
 # answer = response("find_book_date_cat 1980 1990 comic")
 
 # print("\n".join(answer))
 # print(borrowed_twice())
 # print(change_password(111, "ndpqwehfdwe"))
-print("\n".join(map(str, late_users())))
+# print("\n".join(map(str, late_users())))
+# print(user_spent(111))
+# print(avg_spent())
+# response("avg_spent")
+# print(create_user())
+# response("create_user discord example test@mail.com newpasswords M 4155156934 1999-1-1")
