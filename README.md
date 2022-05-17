@@ -1,7 +1,8 @@
 
 
 ## Library Database Management System Discord Bot
-# NUSAN ADHIKARI ID: 918392558
+# NUSAN ADHIKARI 
+# ID: 918392558
 # [Discord Server](https://discord.gg/JHTsjhkNdG)
     Discord url: https://discord.gg/JHTsjhkNdG
 # [Replit app](https://replit.com/join/xneqotjrst-nusanrana) https://replit.com/join/xneqotjrst-nusanrana
