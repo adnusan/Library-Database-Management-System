@@ -5,7 +5,8 @@
 # ID: 918392558
 # [Discord Server](https://discord.gg/JHTsjhkNdG)
     Discord url: https://discord.gg/JHTsjhkNdG
-# [Replit app](https://replit.com/join/xneqotjrst-nusanrana) https://replit.com/join/xneqotjrst-nusanrana
+# [Replit app](https://replit.com/join/xneqotjrst-nusanrana)
+    Replit url: https://replit.com/join/xneqotjrst-nusanrana
 
 ## GRADER MUST READ
 * My database has only few data inserted.
