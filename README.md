@@ -2,13 +2,13 @@
 
 ## Library Database Management System Discord Bot
 # NUSAN RANA 
-# ID: 918392558
+
 # [Discord Server](https://discord.gg/JHTsjhkNdG)
     Discord url: https://discord.gg/JHTsjhkNdG
 # [Replit app](https://replit.com/join/xneqotjrst-nusanrana)
     Replit url: https://replit.com/join/xneqotjrst-nusanrana
 
-## GRADER MUST READ
+##MUST READ
 * My database has only few data inserted.
 * Data in my database are not real, they are just mockup
 * Please when entering parameters in bot command use examples command I provided OR look into inserted data in database
