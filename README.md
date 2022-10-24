@@ -2,8 +2,7 @@
 
 ## Library Database Management System Discord Bot
 # Author @NUSAN RANA 
-# I designed this Library Database Management System from the scratch using MySql. I'm using discord as interface for this database where user can
-# use command to interact with this database. Database is hosted on cloud.
+# I designed this Library Database Management System from the scratch using MySql. I'm using discord as interface for this database where user can use command to interact with this database. Database is hosted on cloud.
 
 
 # [Discord Server](https://discord.gg/JHTsjhkNdG)
