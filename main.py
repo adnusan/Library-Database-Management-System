@@ -13,8 +13,8 @@ import database as db
 import random
 
 # environment variables
-token = "OTcxMTkwODAxNTA3OTU0NzI4.GHeiVY.vfO9CYk2jrBI-POxA1mUHlzO2oii0pj6Ml4aKU"
-server = "nadhikariServer"
+token = "token"
+server = "servername"
 # server_id = os.environ['SERVER_ID']  # optional
 # channel_id = os.environ['CHANNEL_ID']  # optional
 
