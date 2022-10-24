@@ -8,10 +8,10 @@ from tkinter import Variable
 from turtle import clear
 import pymysql.cursors
 
-db_host = "remotemysql.com"
-db_username = "nH2MoFjX0X"
-db_password = "hctY2gFAim"
-db_name = "nH2MoFjX0X"
+db_host = "host"
+db_username = "username"
+db_password = "password"
+db_name = "dbname"
 
 # your code here
 
