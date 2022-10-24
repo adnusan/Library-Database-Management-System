@@ -3,12 +3,12 @@
 # Library Database Management System Discord Bot
 ## Author @NUSAN RANA 
 ## I designed this Library Database Management System from the scratch using MySql. I'm using discord as interface for this database where user can use command to interact with this database. Database is hosted on cloud.
-# MySql database schema and data insertion file is inside mysqldatabase folder under milestone 3.
+## MySql database schema and data insertion file is inside mysqldatabase folder under milestone 3.
 
 
-# [Discord Server](https://discord.gg/JHTsjhkNdG)
+## [Discord Server](https://discord.gg/JHTsjhkNdG)
     Discord url: https://discord.gg/JHTsjhkNdG
-# [Replit app](https://replit.com/join/xneqotjrst-nusanrana)
+## [Replit app](https://replit.com/join/xneqotjrst-nusanrana)
     Replit url: https://replit.com/join/xneqotjrst-nusanrana
 
 ##MUST READ
